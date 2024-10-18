@@ -3,7 +3,7 @@
     include '../db.php';
 
     if (!isset($_SESSION['username']) || $_SESSION['role'] != 'employee') {
-        header("Location: login.php");
+        header("Location: index.php");
         exit();
     }
 
