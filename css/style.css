@@ -1,0 +1,28 @@
+@import url(https://fonts.googleapis.com/css2?family=Merienda:wght@300;400&family=Poppins:wght@400;500;600&display=swap);
+* {
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: #577877;
+}
+.login-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    background-color: #f0f5f7;
+}
+.form-header{
+    background-color: #162623;
+}
+.loginbtn {
+    background-color: #162623;
+}
+.loginbtn:hover{
+    background-color: #577877;
+}
+.btn {
+    letter-spacing: 2px;
+}
+

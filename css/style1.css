@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css2?family=Merienda:wght@300;400&family=Poppins:wght@400;500;600&display=swap);
+* {
+    font-family: 'Poppins', sans-serif;
+}
+.header {
+    background-color: #162623;
+    border: 2px solid black;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn, .btnn {
+    background-color: #295255;
+    color: #fff;
+}
+.btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+.employee {
+    padding: 10px 10px 0 10px;
+}
+.btnn {
+    border-radius: 2px;
+    border: none;
+    padding: 4px 8px;
+}
+.btnn:hover {
+    background-color: #162623;
+    color: #fff;
+}
+.thead {
+    background-color: #162623;
+}
+.editbtn, .delbtn {
+    padding: 5px 12px 5px 8px;
+    border-radius: 5px;
+}
+.editbtn a, .delbtn a {
+    color: #fff;
+}
+.editbtn {
+    background-color: #1987ac;
+}
+.delbtn {
+    background-color: rgb(168, 12, 12);
+}
+.editbtn a:hover, .delbtn a:hover {
+    color: #000;
+}
+.editbtn:hover, .delbtn:hover {
+    background-color: #fff;
+    border: 1px solid #000;
+}
+.backtn {
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    background-color: #fff;
+}
