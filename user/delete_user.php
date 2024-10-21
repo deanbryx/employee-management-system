@@ -12,8 +12,11 @@
     $sql = "DELETE FROM users WHERE id = $user_id AND role = 'user'";
 
     if ($conn->query($sql) === TRUE) {
-        header("Location: user.php");
+        $_SESSION['success'] = "User deleted successfully!";
     } else {
-        echo "Error deleting record: " . $conn->error;
+        $_SESSION['error'] = "Error deleting user: " . $conn->error;
     }
-?>
+    
+    header("Location: user.php");
+    exit();
+?> 

@@ -10,52 +10,29 @@
     align-items: center;
     justify-content: space-between;
 }
-.btn, .btnn {
+.btn {
     background-color: #295255;
     color: #fff;
 }
 .btn:hover {
     background-color: #fff;
     color: #000;
+    border: 1px solid black;
 }
 .employee {
     padding: 10px 10px 0 10px;
 }
-.btnn {
-    border-radius: 2px;
-    border: none;
-    padding: 4px 8px;
-}
-.btnn:hover {
-    background-color: #162623;
-    color: #fff;
-}
 .thead {
     background-color: #162623;
 }
-.editbtn, .delbtn {
-    padding: 5px 12px 5px 8px;
-    border-radius: 5px;
+.modal {
+    margin-top: 100px;
 }
-.editbtn a, .delbtn a {
-    color: #fff;
-}
-.editbtn {
-    background-color: #1987ac;
-}
-.delbtn {
-    background-color: rgb(168, 12, 12);
-}
-.editbtn a:hover, .delbtn a:hover {
-    color: #000;
-}
-.editbtn:hover, .delbtn:hover {
-    background-color: #fff;
-    border: 1px solid #000;
-}
-.backtn {
-    border-radius: 5px;
-    font-weight: bold;
-    border: none;
-    background-color: #fff;
+.float-alert {
+    position: fixed;
+    top: 82px;
+    right: 120px;
+    z-index: 1050; 
+    width: fit-content;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }

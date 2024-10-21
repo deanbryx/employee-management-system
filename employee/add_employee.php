@@ -2,7 +2,7 @@
     session_start();
     include '../db.php';
 
-    if (!isset($_SESSION['username']) || $_SESSION['role'] != 'user') {
+    if (!isset($_SESSION['username']) || $_SESSION['role'] != 'employee') {
         header("Location: index.php");
         exit();
     }
@@ -16,13 +16,13 @@
         
         if ($check_result->num_rows > 0) {
             $_SESSION['error'] = "Error: Username already exists!";
-            header("Location: user.php");
+            header("Location: employee.php");
         } else {
-            $sql = "INSERT INTO users (username, password, role) VALUES ('$username', '$password', 'user')";
+            $sql = "INSERT INTO users (username, password, role) VALUES ('$username', '$password', 'employee')";
 
             if ($conn->query($sql) === TRUE) {
-                $_SESSION['success'] = "User added successfully!";
-                header("Location: user.php");
+                $_SESSION['success'] = "Employee added successfully!";
+                header("Location: employee.php");
             } else {
                 $error = "Error: " . $sql . "<br>" . $conn->error;
             }

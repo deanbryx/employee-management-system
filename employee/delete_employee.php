@@ -1,7 +1,7 @@
 <?php
     session_start();
     include '../db.php';
-
+    
     if (!isset($_SESSION['username']) || $_SESSION['role'] != 'employee') {
         header("Location: index.php");
         exit();
@@ -12,8 +12,10 @@
     $sql = "DELETE FROM users WHERE id = $employee_id AND role = 'employee'";
 
     if ($conn->query($sql) === TRUE) {
-        header("Location: employee.php");
+        $_SESSION['success'] = "User deleted successfully!";
     } else {
-        echo "Error deleting record: " . $conn->error;
+        $_SESSION['error'] = "Error deleting user: " . $conn->error;
     }
+    header("Location: employee.php");
+    exit();
 ?>

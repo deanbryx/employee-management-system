@@ -39,6 +39,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php require 'links.php'; ?>
 </head>
 <body>
+    <!-- Background & animion & navbar & title -->
+    <div class="container-fluid">
+        <!-- Background animtion-->
+        <div class="background">
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+    </div>
     <div id="loginForm" class="login-form text-center rounded shadow overflow-hidden">
         <form action="" method="POST">
             <div class="form-header px-1">
