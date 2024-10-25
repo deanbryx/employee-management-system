@@ -7,19 +7,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
 
     $sql = "SELECT * FROM users WHERE username = '$username'";
-    $result = $conn->query($sql);
-
+    $result = $conn->query(query: $sql);
+ 
     if ($result->num_rows > 0) {
         $user = $result->fetch_assoc();
 
-        if (password_verify($password, $user['password'])) {
+        if (password_verify(password: $password, hash: $user['password'])) {
             $_SESSION['username'] = $user['username'];
             $_SESSION['role'] = $user['role'];
 
             if ($user['role'] == 'user') {
-                header("Location: user/user.php");
+                header(header: "Location: user/user.php");
             } elseif ($user['role'] == 'employee') {
-                header("Location: employee/employee.php");
+                header(header: "Location: employee/employee.php");
             }
         } else {
             $error = "Invalid username or password.";
@@ -39,9 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php require 'links.php'; ?>
 </head>
 <body>
-    <!-- Background & animion & navbar & title -->
     <div class="container-fluid">
-        <!-- Background animtion-->
         <div class="background">
         <div class="cube"></div>
         <div class="cube"></div>

@@ -185,7 +185,7 @@
                                             </div>
                                         </div>
 
-                                        <!-- Logout Confirmation Modal -->
+                                        <!-- Logout Confirmation -->
                                         <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
@@ -199,10 +199,7 @@
                                                         <p>Are you sure you want to log out your account?</p>
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <!-- Cancel Button -->
                                                         <button type="button" class="text-decoration-none border-0 bg-transparent" data-bs-dismiss="modal">No</button>
-                                                        
-                                                        <!-- Confirm Logout Button -->
                                                         <a href="../logout.php" class="btn btn-link text-decoration-none bg-danger">Yes</a>
                                                     </div>
                                                 </div>
@@ -220,13 +217,20 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        window.setTimeout(function() {
-            var alert = document.querySelector('.alert');
+        function autoDismissAlert(alertId) {
+            const alert = document.getElementById(alertId);
             if (alert) {
-                alert.classList.remove('show');
-                alert.classList.add('fade');
+                setTimeout(() => {
+                    const bsAlert = new bootstrap.Alert(alert);
+                    bsAlert.close();
+                }, 2000);
             }
-        }, 2000);
+        }
+
+        window.onload = function() {
+            autoDismissAlert('success-alert');
+            autoDismissAlert('error-alert');
+        };
     </script>
 </body>
 </html>
